@@ -1,0 +1,16 @@
+.responsive-logo {
+    width: 20%;  /* Makes the SVG take up 100% of its parent container */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 200px; /* Optional: Set a maximum width to control the size */
+  }
+  
+  @media (max-width: 768px) {
+    .responsive-logo {
+      max-width: 150px; /* Resize the logo for smaller screens */
+    }
+  }
+  .logo {
+    width: 1rem;
+    height: 1rem;
+  }
+    

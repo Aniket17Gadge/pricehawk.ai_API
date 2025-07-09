@@ -1,0 +1,67 @@
+/* Sidebar container */
+.sidebar {
+    width: 300px; /* Increased width of the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #333; /* Sidebar background color */
+    position: fixed; /* Fixes the sidebar to the left side */
+    top: 0;
+    left: 0;
+    border-radius: 0 20px 20px 0; /* Increased border-radius for more rounded corners */
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4); /* Increased shadow for more depth */
+    z-index: 1000; /* Ensures sidebar is above other elements */
+    transform: translateX(-100%); /* Initially hides the sidebar off-screen */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for sliding */
+}
+
+/* Sidebar open state */
+.sidebar.open {
+    transform: translateX(0); /* Slide sidebar into view */
+}
+
+/* Sidebar content */
+.sidebar-content {
+    padding: 30px; /* Increased padding for content */
+    color: #fff; /* Text color for sidebar content */
+    font-size: 1.4rem; /* Increased font size for readability */
+}
+
+/* Dark mode adjustments for sidebar */
+.header.dark-mode .sidebar {
+    background-color: #222; /* Darker background in dark mode */
+}
+
+/* Hover effect for sidebar links */
+.sidebar a {
+    color: #fff; /* White color for links */
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px; /* Increased padding for links */
+    border-radius: 8px; /* More rounded corners for links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle {
+    font-size: 2rem; /* Increased size of the toggle button */
+    cursor: pointer;
+    position: absolute;
+    left: 30px; /* Position toggle button to the left */
+    top: 50%; /* Center toggle button vertically */
+    transform: translateY(-50%);
+    background: none; 
+    border: none; 
+    padding: 0; 
+    outline: none;
+}
+
+/* Sidebar toggle button icon */
+.sidebar-toggle svg {
+    width: 32px; /* Increased width */
+    height: 32px; /* Increased height */
+    fill: #e8eaed; /* Ensure correct color */
+}
+
+/* Dark mode adjustment for sidebar toggle button */
+.header.dark-mode .sidebar-toggle svg {
+    fill: #e0e0e0; /* Light gray color for dark mode */
+}

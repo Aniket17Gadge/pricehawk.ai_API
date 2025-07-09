@@ -1,0 +1,374 @@
+/* Chat container styling */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 0 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styling */
+.chat-container.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Light mode styling */
+.chat-container.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Chat interface styling */
+.chat-interface {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    height: calc(100vh - 80px - 4rem); /* Adjust based on header and prompt bar height */
+    background: transparent; /* Background should be transparent */
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 110px; /* Space below header */
+    margin-bottom: 4rem; /* Space above chat prompt bar */
+    position: relative;
+    display: flex; /* Ensure flex layout for messages container */
+    flex-direction: column;
+}
+
+/* Messages container styling */
+.messages-container {
+    flex: 1; /* Grow to fill available space */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto; /* Scroll if content exceeds container height */
+    background: transparent;
+}
+
+/* Message bubble styling */
+.message {
+    max-width: 80%;
+    padding: 1rem;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-wrap: break-word; /* Ensure long words break and wrap */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* User message styling */
+.message.user {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: #ffffff;
+    border-bottom-right-radius: 0;
+}
+
+/* Bot message styling */
+.message.bot {
+    align-self: flex-start;
+    background-color: #e5e5ea;
+    color: #000000;
+    border-bottom-left-radius: 0;
+    display: flex; /* Ensure content aligns properly */
+    flex-direction: column; /* Allow for multi-line content */
+}
+
+/* Dark mode styling for user message */
+.message.user.dark-mode {
+    background-color: #0056b3;
+}
+
+/* Dark mode styling for bot message */
+.message.bot.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Chat prompt bar styling */
+.chat-prompt-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px; /* Ensure it matches chat interface width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #f8f9fa; /* Light background for chat prompt bar */
+    border-top: 1px solid #ddd; /* Optional border */
+    border-radius: 1rem;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: background-color 0.3s ease, height 0.3s ease;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Dark mode styling for chat prompt bar */
+.chat-prompt-bar.dark-mode {
+    background-color: #333333;
+}
+
+/* Light mode styling for chat prompt bar */
+.chat-prompt-bar.light-mode {
+    background-color: #f4f4f4;
+}
+
+/* Chat input styling */
+.chat-input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s, placeholder-color 0.3s;
+    resize: none; /* Prevent resizing */
+    min-height: 2rem; /* Minimum height for the input field */
+    overflow: hidden; /* Prevent input overflow */
+}
+
+/* Dark mode styling for chat input */
+.chat-input.dark-mode {
+    color: #ffffff;
+}
+
+/* Light mode styling for chat input */
+.chat-input.light-mode {
+    color: #121212;
+}
+
+/* Placeholder styling */
+.chat-input::placeholder {
+    transition: color 0.3s;
+}
+
+/* Dark mode styling for placeholder */
+.chat-input.dark-mode::placeholder {
+    color: #BBBBBB;
+}
+
+/* Light mode styling for placeholder */
+.chat-input.light-mode::placeholder {
+    color: #888888;
+}
+
+/* Arrow icon styling */
+.arrow-icon {
+    font-size: 2rem; /* Adjust size as needed */
+    color: #007bff; /* Default color */
+    margin-left: 1rem; /* Space between input and icon */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Dark mode styling for arrow icon */
+.arrow-icon.dark-mode {
+    color: #ffffff;
+}
+
+/* Light mode styling for arrow icon */
+.arrow-icon.light-mode {
+    color: #007bff;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 600px) {
+    .chat-prompt-bar {
+        padding: 0.5rem;
+        border-radius: 20px;
+    }
+
+    .chat-input {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .arrow-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ensuring that the chat prompt bar stays responsive */
+@media (min-width: 601px) {
+    .chat-prompt-bar {
+        max-width: 867px; /* Adjust max-width for larger screens */
+        margin: 0 auto; /* Center bar on larger screens */
+    }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframes for blinking cursor animation */
+@keyframes blink {
+    0% {
+        border-right: 2px solid transparent;
+    }
+    50% {
+        border-right: 2px solid #000000; /* Adjust color as needed */
+    }
+    100% {
+        border-right: 2px solid transparent;
+    }
+}
+
+
+
+/* Welcome message with typing effect */
+.typing-effect {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+    border-right: 2px solid #000000; /* Adjust color as needed */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem; /* Adjust size for Codly */
+    font-weight: 700; /* Bolder text */
+    background: linear-gradient(45deg, #f6d365, #fda085); /* Gradient color for Codly */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Bot message styling */
+.message.bot {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    background-color: #e5e5ea;
+    color: #000000;
+    border-bottom-left-radius: 0;
+    position: relative;
+    padding-left: 3rem; /* Space for logo */
+}
+
+
+/* Styling for the bot logo */
+.bot-logo {
+    position: absolute;
+    left: 1rem; /* Adjust space from left edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the logo */
+    width: 2rem; /* Adjust size as needed */
+    height: 2rem; /* Adjust size as needed */
+    background-size: contain;
+}
+
+/* Make the logo responsive */
+.responsive-logo-chat {
+    width: 30px; /* Adjust size */
+    height: 30px;
+    fill: #000; /* Default fill color */
+}
+
+/* If dark mode, change the logo color */
+.chat-container.dark-mode .responsive-logo {
+    fill: #fff; /* White color for dark mode */
+}
+
+/* Add some padding around the bot's message */
+.message.bot {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/* Typing indicator styling */
+.typing-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.2rem;
+    color: #007bff; /* Adjust color as needed */
+}
+
+/* Dark mode styling for typing indicator */
+.typing-indicator.dark-mode {
+    color: #ffffff;
+}
+
+/* Light mode styling for typing indicator */
+.typing-indicator.light-mode {
+    color: #007bff;
+}
+
+/* Individual dot animation for typing indicator */
+.typing-indicator span {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: currentColor; /* Inherit color from parent */
+    animation: blink 1s infinite alternate;
+}
+
+/* Typing indicator animation */
+.typing-indicator span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Scrollbar styling */
+.messages-container::-webkit-scrollbar {
+    width: 8px; /* Adjust width as needed */
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust color as needed */
+    border-radius: 10px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 600px) {
+    .chat-interface {
+        height: calc(100vh - 60px - 4rem); /* Adjust for smaller screens */
+    }
+    
+    .chat-input {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+    
+    .arrow-icon {
+        font-size: 1.5rem; /* Smaller icon size for mobile */
+    }
+    
+    .message {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+}

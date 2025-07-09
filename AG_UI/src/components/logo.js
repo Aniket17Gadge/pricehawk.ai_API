@@ -1,0 +1,25 @@
+import React from 'react';
+import './css/logo.css'; // Importing the CSS file for styles
+
+const Logo = ({ isDarkMode }) => {
+  // Set the color based on dark mode
+  const logoFill = isDarkMode ? '#ffffff' : '#000000'; // White for dark mode, black for light mode
+
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 694.9154975818374 341.5873871126423" className="responsive-logo">
+        
+      {/* Background Rectangle */}
+      <g stroke-linecap="round"><g transform="translate(454.5009438238508 118.72522937177018) rotate(0 62.76449727476029 53.457885366336086)" fill-rule="evenodd"><path d="M0 0 L230.41 0.02 L129.98 106.92 L-104.89 106.26 L0 0" stroke="none" stroke-width="0" fill={logoFill} fill-rule="evenodd"></path><path d="M0 0 C70.63 0.01, 141.25 0.01, 230.41 0.02 M0 0 C90.22 0.01, 180.44 0.02, 230.41 0.02 M230.41 0.02 C208.02 23.85, 185.63 47.68, 129.98 106.92 M230.41 0.02 C199.06 33.39, 167.71 66.75, 129.98 106.92 M129.98 106.92 C78.75 106.77, 27.52 106.63, -104.89 106.26 M129.98 106.92 C36.55 106.66, -56.87 106.4, -104.89 106.26 M-104.89 106.26 C-76.65 77.66, -48.42 49.05, 0 0 M-104.89 106.26 C-68.25 69.15, -31.62 32.04, 0 0 M0 0 C0 0, 0 0, 0 0 M0 0 C0 0, 0 0, 0 0" stroke="#000000" stroke-width="1" fill={logoFill}></path></g></g><mask></mask>
+      <g stroke-linecap="round"><g transform="translate(240.4145537579866 118.08482285171522) rotate(0 -62.76449727476029 53.457885366336086)" fill-rule="evenodd"><path d="M0 0 L-230.41 0.02 L-129.98 106.92 L104.89 106.26 L0 0" stroke="none" stroke-width="0" fill={logoFill} fill-rule="evenodd"></path><path d="M0 0 C-65.09 0.01, -130.19 0.01, -230.41 0.02 M0 0 C-72.94 0.01, -145.88 0.01, -230.41 0.02 M-230.41 0.02 C-194.65 38.08, -158.89 76.14, -129.98 106.92 M-230.41 0.02 C-203.78 28.37, -177.14 56.72, -129.98 106.92 M-129.98 106.92 C-49.59 106.69, 30.8 106.47, 104.89 106.26 M-129.98 106.92 C-62.81 106.73, 4.35 106.54, 104.89 106.26 M104.89 106.26 C68.87 69.77, 32.85 33.28, 0 0 M104.89 106.26 C80.98 82.04, 57.07 57.82, 0 0 M0 0 C0 0, 0 0, 0 0 M0 0 C0 0, 0 0, 0 0" stroke="#000000" stroke-width="1" fill={logoFill}></path></g></g><mask></mask>
+
+      <g stroke-linecap="round"><g transform="translate(346.34030861219526 226.88119478953558) rotate(0 -2.536405975122989 52.35309616155337)" fill-rule="evenodd"><path d="M0 0 L97 104.71 L-102.08 103.42 L0 0" stroke="none" stroke-width="0" fill={logoFill} fill-rule="evenodd"></path><path d="M0 0 C19.82 21.39, 39.64 42.79, 97 104.71 M0 0 C19.65 21.21, 39.31 42.43, 97 104.71 M97 104.71 C39.41 104.34, -18.18 103.96, -102.08 103.42 M97 104.71 C51.38 104.41, 5.76 104.12, -102.08 103.42 M-102.08 103.42 C-64.73 65.59, -27.39 27.75, 0 0 M-102.08 103.42 C-79.09 80.13, -56.1 56.84, 0 0 M0 0 C0 0, 0 0, 0 0 M0 0 C0 0, 0 0, 0 0" stroke="#000000" stroke-width="1" fill={logoFill}></path></g></g><mask></mask>
+
+      <g stroke-linecap="round"><g transform="translate(351.0928988887681 12.266535133421712) rotate(0 -2.6736116363117617 52.35309616155337)" fill-rule="evenodd"><path d="M0 0 L102.25 104.71 L-107.6 103.42 L0 0" stroke="none" stroke-width="0" fill={logoFill} fill-rule="evenodd"></path><path d="M0 0 C20.72 21.21, 41.43 42.43, 102.25 104.71 M0 0 C29.58 30.29, 59.16 60.58, 102.25 104.71 M102.25 104.71 C54.16 104.41, 6.07 104.12, -107.6 103.42 M102.25 104.71 C25.48 104.24, -51.3 103.77, -107.6 103.42 M-107.6 103.42 C-83.37 80.13, -59.14 56.84, 0 0 M-107.6 103.42 C-71.19 68.43, -34.78 33.43, 0 0 M0 0 C0 0, 0 0, 0 0 M0 0 C0 0, 0 0, 0 0" stroke="#000000" stroke-width="1" fill={logoFill}></path></g></g><mask></mask>
+
+      <g stroke-linecap="round"><g transform="translate(398.96746807285626 10) rotate(0 -36.70202697424588 24.24018886085105)" fill-rule="evenodd"><path d="M0 0 L-134.74 0.01 L-76.01 48.48 L61.33 48.18 L0 0" stroke="none" stroke-width="0" fill={logoFill} fill-rule="evenodd"></path><path d="M0 0 C-41.75 0, -83.49 0.01, -134.74 0.01 M0 0 C-46.09 0, -92.18 0.01, -134.74 0.01 M-134.74 0.01 C-113.78 17.31, -92.82 34.6, -76.01 48.48 M-134.74 0.01 C-121.06 11.3, -107.38 22.58, -76.01 48.48 M-76.01 48.48 C-39.81 48.4, -3.61 48.32, 61.33 48.18 M-76.01 48.48 C-31.31 48.38, 13.38 48.29, 61.33 48.18 M61.33 48.18 C41.32 32.46, 21.31 16.74, 0 0 M61.33 48.18 C46.99 36.92, 32.64 25.65, 0 0 M0 0 C0 0, 0 0, 0 0 M0 0 C0 0, 0 0, 0 0" stroke="#000000" stroke-width="1" fill={logoFill}></path></g></g><mask></mask>
+    </svg>
+  );
+};
+
+
+export default Logo;

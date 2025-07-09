@@ -1,0 +1,280 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Default light mode background color */
+    color: #333; /* Default light mode text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text colors */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    padding: 15px 20px; /* Adjusted padding for better responsiveness */
+    background: #ffffff; /* Light mode background color */
+    position: fixed; /* Fixes the header at the top of the page */
+    top: 0; /* Align the header to the top */
+    left: 0; /* Ensure the header spans the full width */
+    right: 0; /* Ensure the header spans the full width */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border for light mode */
+    transition: background 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+    width: 100%; /* Ensure header spans the full width */
+    box-sizing: border-box;
+    z-index: 1000; /* Ensure header stays above other content */
+}
+
+/* Dark mode adjustments */
+.header.dark-mode {
+    background: #000000; /* Dark background for dark mode */
+    
+}
+
+/* Title container */
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo {
+    fill: #333; /* Default color for light mode */
+    transition: fill 0.3s ease; /* Smooth color transition */
+}
+
+/* Dark mode styling for Foggy Icon */
+.header.dark-mode .logo {
+    fill: #e0e0e0; /* Light gray color for dark mode */
+}
+
+.header.dark-mode .Logo {
+    fill: #e0e0e0; /* Light gray color for dark mode */
+}
+/* Title styling */
+.title {
+    font-family: 'Gabarito', sans-serif; /* Use Gabarito font */
+    font-size: 2rem; /* Adjust font size for responsiveness */
+    font-weight: bold; /* Make font bold */
+    color: #333; /* Dark gray text for light mode */
+    text-align: center; /* Center the text within its container */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Dark mode adjustments for title */
+.header.dark-mode .title {
+    color: #e0e0e0; /* Light gray text in dark mode */
+}
+
+/* Public/Private Toggle Button Styling */
+.visibility-toggle {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Position the toggle button absolutely */
+    left: 100px; /* Adjusted position to move the button further right */
+    cursor: pointer;
+}
+
+/* Toggle button labels */
+.label {
+    font-size: 0.875rem; /* Smaller font size for labels */
+    color: #333; /* Default color for light mode */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Dark mode styling for labels */
+.header.dark-mode .label {
+    color: #e0e0e0; /* Light gray color for dark mode */
+}
+
+/* Visibility switch styling */
+.visibility-switch {
+    width: 60px; /* Smaller width */
+    height: 30px; /* Smaller height */
+    background: #cccccc; /* Light gray background for light mode */
+    border-radius: 15px; /* Rounded corners */
+    position: relative;
+    margin: 0 10px;
+    transition: background 0.3s ease;
+}
+
+/* Dark mode visibility switch styling */
+.header.dark-mode .visibility-switch {
+    background: #555; /* Darker gray background for dark mode */
+}
+
+/* Public mode switch color */
+.visibility-switch.public {
+    background: #4caf50; /* Green background for public mode */
+}
+
+/* Private mode switch color */
+.visibility-switch.private {
+    background: #f44336; /* Red background for private mode */
+}
+
+/* Dark mode public switch color */
+.header.dark-mode .visibility-switch.public {
+    background: #388e3c; /* Darker green for dark mode public */
+}
+
+/* Dark mode private switch color */
+.header.dark-mode .visibility-switch.private {
+    background: #d32f2f; /* Darker red for dark mode private */
+}
+
+/* Switch handle styling */
+.visibility-switch::before {
+    content: '';
+    width: 24px; /* Smaller handle width */
+    height: 24px; /* Smaller handle height */
+    background: #ffffff; /* White handle for light mode */
+    border-radius: 50%;
+    position: absolute;
+    top: 3px; /* Adjusted top position */
+    left: 3px; /* Adjusted left position */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Dark mode switch handle styling */
+.header.dark-mode .visibility-switch::before {
+    background: #333; /* Darker handle for dark mode */
+}
+
+/* Switch handle positioning */
+.visibility-switch.public::before {
+    transform: translateX(0);
+}
+
+.visibility-switch.private::before {
+    transform: translateX(30px); /* Adjust based on switch width */
+}
+
+/* Toggle button styling */
+.toggle {
+    width: 60px; /* Smaller width */
+    height: 30px; /* Smaller height */
+    background: #00509e; /* Professional blue for light mode */
+    border-radius: 30px;
+    position: absolute; /* Position the toggle button absolutely */
+    right: 20px; /* Align the toggle button to the right of the header */
+    cursor: pointer;
+    transition: background 0.5s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode toggle button styling */
+.header.dark-mode .toggle {
+    background: #333; /* Dark gray background for dark mode */
+}
+
+/* Toggle circle styling */
+.toggle-circle {
+    width: 25px; /* Smaller width */
+    height: 25px; /* Smaller height */
+    background-color: #ffffff; /* White circle for light mode */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 2px; /* Adjusted left position */
+    transform: translateY(-50%);
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode toggle circle styling */
+.header.dark-mode .toggle-circle {
+    background-color: #333; /* Darker circle for dark mode */
+    transform: translate(35px, -50%); /* Move circle for dark mode */
+}
+
+/* Icon styling within toggle */
+.icon-sun, .icon-moon {
+    font-size: 1.25rem; /* Slightly smaller font size */
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+/* Sun icon color for light mode */
+.icon-sun {
+    color: #ffd700; /* Gold color for light mode */
+}
+
+/* Moon icon color for light mode */
+.icon-moon {
+    color: #87ceeb; /* Light blue color for light mode */
+}
+
+/* Dark mode sun icon color */
+.header.dark-mode .icon-sun {
+    color: #ff6347; /* Darker gold color for dark mode */
+}
+
+/* Dark mode moon icon color */
+.header.dark-mode .icon-moon {
+    color: #1e90ff; /* Darker blue color for dark mode */
+}
+
+/* Add a glowing effect to the toggle */
+.toggle-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Dark mode toggle circle glow */
+.header.dark-mode .toggle-circle::before {
+    opacity: 1;
+}
+
+/* Sidebar toggle icon */
+.sidebar-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    left: 20px; /* Adjust based on design */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000; /* Black color for light mode */
+}
+
+/* Dark mode adjustment for sidebar toggle icon */
+.header.dark-mode .sidebar-toggle {
+    color: #e0e0e0; /* Light gray color for dark mode */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .title {
+        font-size: 1.8rem; /* Reduce title font size */
+    }
+
+    .visibility-toggle {
+        left: 50px; /* Adjust position for smaller screens */
+    }
+
+    .toggle {
+        width: 50px; /* Adjust width for smaller screens */
+        height: 25px; /* Adjust height for smaller screens */
+    }
+
+    .toggle-circle {
+        width: 20px; /* Adjust circle width */
+        height: 20px; /* Adjust circle height */
+    }
+}
